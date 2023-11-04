@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Skin 1",
+    "tipo": "ARMA",
+    "precio": 10,
+    "descripcion": "Skin 1",
+    "color": "ROJO"
+  },
+  {
+    "id": 2,
+    "nombre": "Skin 2",
+    "tipo": "ARMA",
+    "precio": 56,
+    "descripcion": "Skin 2",
+    "color": "AMARILLO"
+  },
+  {
+    "id": 3,
+    "nombre": "Skin 3",
+    "tipo": "ARMA",
+    "precio": 12,
+    "descripcion": "Skin 3",
+    "color": "VERDE"
+  },
+  {
+    "id": 4,
+    "nombre": "Skin 4",
+    "tipo": "MAPA",
+    "precio": 74,
+    "descripcion": "Skin 4",
+    "color": "ROJO"
+  },
+  {
+    "id": 5,
+    "nombre": "Skin 5",
+    "tipo": "MAPA",
+    "precio": 90,
+    "descripcion": "Skin 5",
+    "color": "AZUL"
+  },
+  {
+    "id": 6,
+    "nombre": "Skin 6",
+    "tipo": "PERSONAJE",
+    "precio": 123,
+    "descripcion": "Skin 6",
+    "color": "AZUL"
+  }
+]
