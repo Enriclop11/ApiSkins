@@ -64,7 +64,7 @@ Esta funcion pide usuario y contraseña junto la id de la skin, asi no poder bor
 
 Esta funcion pide la id de una de las skins disponibles, enseña en JSON esa skin determinada.
 
-##Ejecutar en local
+## Ejecutar en local
 
 Para ejecutar en local solo hay que tener una base de datos conectada y con sus propiedades en application.properties
 En mi caso lo tengo con un XAMPP con MySQL, simplemente cree una base de datos, se le introduce la url de la ip, en mi caso localhost:3306/api_skins y el usuario ROOT, la password vacia, esto depende de como quieras tu seguridad, en local y para hacer pruebas no haria falta seguridad entonces va bien para testeo.
