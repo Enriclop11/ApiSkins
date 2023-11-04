@@ -2,7 +2,6 @@ package com.enriclop.apiskins.modelo;
 
 import com.enriclop.apiskins.enums.Color;
 import com.enriclop.apiskins.enums.TipoSkin;
-import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -10,11 +9,12 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "skins")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Data
 public class Skin {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
 
     private String nombre;

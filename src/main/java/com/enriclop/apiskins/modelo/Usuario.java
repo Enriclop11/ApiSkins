@@ -6,6 +6,8 @@ import lombok.Data;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "usuarios")
@@ -25,19 +27,17 @@ public class Usuario {
     @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "dinero")
     private double dinero;
 
     //Skins owned by the user
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
-    private ArrayList<SkinUser> skins;
+    @OneToMany(mappedBy = "usuario")
+    private List<SkinUser> skins;
 
     public Usuario() {
     }
 
     public Usuario(String username, String password, String email) {
-        this.username = username;
+        this.username = username.toLowerCase();
         this.password = new BCryptPasswordEncoder().encode(password);
         this.email = email;
         this.dinero = 1000;
@@ -45,7 +45,7 @@ public class Usuario {
     }
 
     public void addSkin(Skin skin) {
-        this.skins.add(new SkinUser(skin, this.id));
+        skins.add(new SkinUser(skin, this));
     }
 
     public void removeSkin(SkinUser skin) {

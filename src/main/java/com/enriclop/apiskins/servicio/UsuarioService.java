@@ -21,13 +21,13 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public List<Usuario> getUsuarioByUsername(String username) {
-        return usuarioRepository.findByUsernameLike(username);
+    public Usuario getUsuarioByUsername(String username) {
+        return usuarioRepository.findByUsernameLike(username.toLowerCase());
     }
 
     @Override
     public Usuario getUsuarioByUsernameAndPasword(String nombre, String password) {
-        Usuario user = usuarioRepository.findByUsernameLike(nombre).get(0);
+        Usuario user = usuarioRepository.findByUsernameLike(nombre);
         if (user == null) {
             return null;
         }

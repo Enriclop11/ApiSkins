@@ -1,6 +1,6 @@
 package com.enriclop.apiskins.reporistorio;
 
-import com.enriclop.apiskins.modelo.Usuario;
+import com.enriclop.apiskins.modelo.SkinUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -8,9 +8,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IUsuarioRepository extends JpaRepository<Usuario, Integer> {
-    @Query("select u from Usuario u where u.username like ?1")
-    Usuario findByUsernameLike(String username);
+public interface ISkinUserRepository extends JpaRepository<SkinUser, Integer> {
+    @Query("select s from SkinUser s where s.usuario.id = ?1")
+    List<SkinUser> findByUsuario_Id(int id);
+
 
 
 }

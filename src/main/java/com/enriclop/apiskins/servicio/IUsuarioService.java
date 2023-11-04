@@ -8,7 +8,7 @@ public interface IUsuarioService {
 
     List<Usuario> getUsuarios();
 
-    List<Usuario> getUsuarioByUsername(String username);
+    Usuario getUsuarioByUsername(String username);
 
     Usuario getUsuarioByUsernameAndPasword(String nombre, String password);
 
